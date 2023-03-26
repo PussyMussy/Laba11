@@ -2,7 +2,7 @@ package Ex2;
 
 import java.util.Scanner;
 
-public class Ex2 {
+public class Main1 {
 
     public static int[] arr = new int[10];
     static Scanner in = new Scanner(System.in);

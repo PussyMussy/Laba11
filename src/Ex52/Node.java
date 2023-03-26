@@ -1,2 +1,7 @@
-package Ex52;public class Node {
+package Ex52;
+
+class Node
+{
+    int data;
+    Node next;
 }

@@ -1,2 +1,11 @@
-package Ex8;public class Node {
+package Ex8;
+
+class Node
+{
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
 }

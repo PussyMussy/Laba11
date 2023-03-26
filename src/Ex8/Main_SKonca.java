@@ -1,10 +1,6 @@
 package Ex8;
-
-
-
-        class Main
+        class Main_SKonca
         {
-            // Вспомогательная функция для печати заданного связанного списка
             public static void printList(Node head)
             {
                 Node ptr = head;
@@ -15,18 +11,12 @@ package Ex8;
                 }
                 System.out.println("null");
             }
-
-            // Вспомогательная функция для вставки нового узла в начало связанного списка
             public static Node push(Node head, int data)
             {
                 Node node = new Node(data);
                 node.next = head;
                 return node;
             }
-
-            // Рекурсивная функция для обращения заданного связанного списка. Он обращает вспять
-            // полученный связанный список путем фиксации указателя заголовка и затем `.next`
-            // указатели на каждый узел в обратном порядке
             public static Node reverse(Node head, Node headRef)
             {
                 Node first, rest;
@@ -36,19 +26,13 @@ package Ex8;
                     return headRef;
                 }
 
-                first = head;           // предположим, что сначала = {1, 2, 3}
-                rest = first.next;      // rest = {2, 3}
-
-                // базовый случай: список имеет только один узел
+                first = head;
+                rest = first.next;
                 if (rest == null)
                 {
-                    // фиксируем здесь указатель головы
                     headRef = first;
                     return headRef;
                 }
-
-                // рекурсивно инвертируем меньший случай {2, 3}
-                // после: rest = {3, 2}
                 headRef = reverse(rest, headRef);
 
                 // помещаем первый элемент в конец списка
@@ -57,9 +41,6 @@ package Ex8;
 
                 return headRef;
             }
-
-            // Реверсировать заданный связанный список. Функция принимает ссылку на
-            // головной узел
             public static Node reverse(Node head) {
                 return reverse(head, head);
             }
