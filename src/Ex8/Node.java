@@ -1,5 +1,4 @@
 package Ex8;
-
 class Node
 {
     int data;

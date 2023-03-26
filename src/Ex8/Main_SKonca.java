@@ -21,7 +21,6 @@ package Ex8;
             {
                 Node first, rest;
 
-                // базовый случай пустого списка
                 if (head == null) {
                     return headRef;
                 }
@@ -34,10 +33,8 @@ package Ex8;
                     return headRef;
                 }
                 headRef = reverse(rest, headRef);
-
-                // помещаем первый элемент в конец списка
                 rest.next = first;
-                first.next = null;      // (хитрый шаг — рисуем)
+                first.next = null;
 
                 return headRef;
             }
